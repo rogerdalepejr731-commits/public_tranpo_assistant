@@ -696,4 +696,66 @@
                 .btn-primary:disabled { opacity: .6; cursor: wait; }
                 .btn-secondary { background: #eef2f6; color: #4a6b65; }
 
-                
+                /* ============================================================
+   DEPARTURE LOGS — RESPONSIVE
+   ============================================================ */
+
+.logs-panel {
+  padding: clamp(16px, 1.6vw, 28px);
+  border-radius: clamp(18px, 1.6vw, 26px);
+}
+
+.logs-header {
+  gap: clamp(12px, 1.2vw, 22px);
+  margin-bottom: clamp(20px, 1.6vw, 32px);
+}
+
+.section-title-heading {
+  font-size: clamp(1.2rem, 1.4vw, 1.7rem);
+}
+
+.section-title-heading i {
+  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+}
+
+.section-title p,
+.logs-panel p {
+  font-size: clamp(13px, 1vw, 16px);
+}
+
+/* Table cells scale fluidly */
+.departure-table thead th {
+  padding: clamp(12px, 1vw, 18px) clamp(12px, 1.2vw, 22px);
+  font-size: clamp(10px, 0.8vw, 12px);
+}
+
+.departure-table tbody td {
+  padding: clamp(12px, 1vw, 18px) clamp(12px, 1.2vw, 22px);
+  font-size: clamp(12px, 0.9vw, 14px);
+}
+
+.col-route { max-width: clamp(160px, 20vw, 300px); }
+
+/* On very narrow, drop the least essential column padding */
+@media (max-width: 720px) {
+  .departure-table thead th,
+  .departure-table tbody td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .col-route { max-width: 140px; }
+  .col-date  { width: auto; font-size: 11.5px; }
+}
+
+/* Log stats bar */
+.log-stats {
+  padding: clamp(12px, 1vw, 18px) clamp(16px, 1.4vw, 24px);
+  border-radius: clamp(30px, 3vw, 60px);
+  font-size: clamp(12px, 0.9vw, 13.5px);
+}
+
+/* Large monitors */
+@media (min-width: 1900px) {
+  .departure-table thead th { font-size: 12.5px; }
+  .departure-table tbody td { font-size: 14.5px; }
+}

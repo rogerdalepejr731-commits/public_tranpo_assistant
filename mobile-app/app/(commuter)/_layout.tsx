@@ -1,4 +1,4 @@
-// app/(commuter)/_layout.tsx
+
 import { Redirect, Stack } from "expo-router";
 import { useAuth } from "../../appContext/authContext";
 

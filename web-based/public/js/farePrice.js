@@ -474,23 +474,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 const kilometerCell = document.createElement("div");
                 kilometerCell.classList.add("data-cell", "col-km");
-                kilometerCell.textContent = details.kilometer || "No data";
+                kilometerCell.textContent = details.kilometer + "km" || "No data";
 
                 const regularTcell = document.createElement("div");
                 regularTcell.classList.add("data-cell", "col-reg-t", "price-highlight");
-                regularTcell.textContent = details.regular_t || "No data";
+                regularTcell.textContent = "₱ " + details.regular_t || "No data";
 
                 const discountedTcell = document.createElement("div");
                 discountedTcell.classList.add("data-cell", "col-disc-t");
-                discountedTcell.textContent = details.discounted_t || "No data";
+                discountedTcell.textContent = "₱ " + details.discounted_t || "No data";
 
                 const regularMcell = document.createElement("div");
                 regularMcell.classList.add("data-cell", "col-reg-m", "price-highlight");
-                regularMcell.textContent = details.regular_m || "No data";
+                regularMcell.textContent = "₱ " + details.regular_m || "No data";
 
                 const discountedMcell = document.createElement("div");
                 discountedMcell.classList.add("data-cell", "col-disc-m");
-                discountedMcell.textContent = details.discounted_m || "No data";
+                discountedMcell.textContent = "₱ " + details.discounted_m || "No data";
 
                 row.appendChild(fromTerminalcell);
                 row.appendChild(toTerminalcell);

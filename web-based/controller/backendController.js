@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const path = require('path');
 const fs = require('fs'); 
-const { error } = require('console'); 
 const dbPool = require('../database/dbPool')
 
 //Admin Login
