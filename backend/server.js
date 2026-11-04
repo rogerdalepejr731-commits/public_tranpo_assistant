@@ -14,6 +14,10 @@ const app = express();
 // ================= MIDDLEWARE =================
 app.use(cors({
     origin: [
+      "http://192.168.1.74:4590",
+      "http://192.168.1.74:4560",
+      "http://localhost:4590",
+      "htp://localhost:4560",
       "https://pta-management-admin.up.railway.app",
        "https://mobile-backend-application.up.railway.app"
     ],
@@ -38,7 +42,7 @@ app.get("/", (req, res) => {
 });
 
 // ================= SERVER + SOCKET.IO =================
-const PORT = process.env.PORT || 4570;
+const PORT = process.env.PORT || 4590;
 
 const server = http.createServer(app);
 initSocket(server);
